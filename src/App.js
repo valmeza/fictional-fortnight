@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import HelloWorld from './components/HelloWorld';
 
+// this is a react component
+// stateless react component because it is using a function
+// also called a functional component
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // This funny tag syntax is neither a string nor HTML.
+    // It is called JSX, and it is a syntax extension to JavaScript.
+    <div>
+      <HelloWorld name="Valeria"/> 
     </div>
+    // JSX elements must be wrapped in an enclosing tag
+    // you cannot have two if you want to add more elements they must be
+    // inside of one enclosing tag like above
   );
 }
 
 export default App;
+
