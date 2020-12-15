@@ -8,7 +8,7 @@ function CounterExample() {
     return (
         <div>
             <h1>
-                {count}
+                You clicked {count} times!
             </h1>
             <h1 onClick={() => setCount(count + 1)}>
                 Plus
