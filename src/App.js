@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import HelloWorld from './components/HelloWorld';
+import Footer from './components/Footer';
 // import CounterExample from './components/CounterExample';
 
 // this is a react component
@@ -12,7 +13,8 @@ function App() {
     <div>
       {/* <CounterExample/> */}
       <Header/>
-      <HelloWorld name="Valeria"/> 
+      <HelloWorld name="Valeria" /> 
+      <Footer />
     </div>
     // JSX elements must be wrapped in an enclosing tag
     // you cannot have two if you want to add more elements they must be
