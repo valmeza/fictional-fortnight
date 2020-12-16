@@ -1,14 +1,16 @@
 import React, {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import {useTransition, animated} from 'react-spring'
+import { useTransition, animated } from 'react-spring' // react-spring library
+import NavigationMenu from './NavigationMenu'
+
 
 function Navigation() {
     // state/ react hook
     // variable showMenu, method setShowMenu
     // hook useState
     const [showMenu, setShowMenu] = useState(false)
-    const maskTransitions = useTransition(showMenu, null, {
+    const maskTransitions = useTransition(showMenu, null, { // animations using react-spring
         from: { position: 'absolute', opacity: 0 },
         enter: { opacity: 1 },
         leave: { opacity: 0 },
@@ -38,7 +40,6 @@ function Navigation() {
                         className="bg-black-t-50 fixed top-0 left-0 w-full h-full z-50"
                         onClick={() => setShowMenu(false)}
                     >
-                        
                     </animated.div>
                 )
             }
@@ -51,14 +52,8 @@ function Navigation() {
                         style={props}
                         className="fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow p-3"
                     >
-                        <span className="font-bold">
-                            The Menu
-                        </span>
-                        <ul>
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Contact</li>
-                        </ul>
+                        <NavigationMenu closeMenu={() => setShowMenu(false)} />
+                        
                     </animated.div>
                 )
             }
